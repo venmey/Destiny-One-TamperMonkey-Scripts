@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Make Destiny One Test Blue
 // @namespace    https://github.com/venmey/Destiny-One-TamperMonkey-Scripts
-// @version      1.01
-// @description  Makes the Destiny One toolbar blue instead of red when using TEST.
+// @version      1.02
+// @description  Makes various elements in Destiny One TEST blue instead of red to distinguish it from PROD.
 // @author       Ven Meyerzon
 // @match        https://ucdavistestsv.destinysolutions.com/srs/*
 // @grant        none
@@ -18,5 +18,4 @@
     sheet.insertRule('#main-menu ul li.selectedItem:hover { background-color: #2e30d9; }', sheet.cssRules.length); // top-level dropdown navigation to blue
     sheet.insertRule('.dropDownThirdLevelMenu li.selected > div a { border-left: 5px solid #1d22b5; }', sheet.cssRules.length); // teriary menu currently selected page marker to blue
     sheet.insertRule('#navigation02 ul.navigationMenu > li.selected > div > a, .dropDownThirdLevelMenu li.selected > div a { color: #1d22b5; }', sheet.cssRules.length); // secondary selected menu, teriary selected menu font color to blue
-    //test
 })();
