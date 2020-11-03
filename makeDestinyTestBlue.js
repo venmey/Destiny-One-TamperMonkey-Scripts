@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         Make Destiny One Test Blue
+// @namespace    https://github.com/venmey/Destiny-One-TamperMonkey-Scripts
 // @version      1.01
 // @description  Makes the Destiny One toolbar blue instead of red when using TEST.
 // @author       Ven Meyerzon
