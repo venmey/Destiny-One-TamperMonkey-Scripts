@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Make Destiny One Test Blue
 // @namespace    https://github.com/venmey/Destiny-One-TamperMonkey-Scripts
-// @version      2.0
+// @version      2.1
 // @description  Makes various elements in Destiny One TEST blue instead of red to distinguish it from PROD.
 // @author       Ven Meyerzon
 // @match        https://ucdavistestsv.destinysolutions.com/srs/*
