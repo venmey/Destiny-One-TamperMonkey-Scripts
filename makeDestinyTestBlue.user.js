@@ -34,7 +34,8 @@
  }
 
  .schoolName-text {
-    font-size: 12pt !important;
+    font-size: 13pt !important;
+    margin-left: 20px;
  }
  </style>`
 )
