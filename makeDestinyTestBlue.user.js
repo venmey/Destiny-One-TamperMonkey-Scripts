@@ -14,19 +14,19 @@
     document.head.insertAdjacentHTML("beforeend",
  `<style>
  #navigation01, #footer01, #navigation02 ul.navigationMenu > li:hover, .dropDownThirdLevelMenu > li > div:hover, .dropDownThirdLevelMenu > li > div:hover, #main-menu ul li.hover li.hover {
-     background-color: #1d22b5 !important;
+     background-color: #4F7094 !important;
  }
 
  #main-menu ul li.selectedItem:hover {
-     background-color: #2e30d9 !important;
+     background-color: #6884A3 !important;
  }
 
  .dropDownThirdLevelMenu li.selected > div a {
-     border-left: 5px solid #1d22b5 !important;
+     border-left: 5px solid #4F7094 !important;
  }
 
  #navigation02 ul.navigationMenu > li.selected > div > a, .dropDownThirdLevelMenu li.selected > div a {
-     color: #1d22b5 !important;
+     color: #4F7094 !important;
  }
 
  .dropDownThirdLevelMenu li > div:hover > a, #navigation02 ul.navigationMenu > li:hover > div > a {
