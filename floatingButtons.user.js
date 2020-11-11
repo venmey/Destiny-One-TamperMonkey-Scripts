@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Floating Buttons
 // @namespace    https://github.com/venmey/Destiny-One-TamperMonkey-Scripts
-// @version      2.3
-// @description  Makes the Save button on various pages float on the left side of the screen as you scroll for easier access.
+// @version      2.4
+// @description  Makes the Save button on various pages float at the bottom of the screen as you scroll for easier access.
 // @author       Ven Meyerzon
 // @match        https://ucdavistestsv.destinysolutions.com/srs/*
 // @grant        none
