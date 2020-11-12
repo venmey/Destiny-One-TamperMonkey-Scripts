@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Floating Buttons
 // @namespace    https://github.com/venmey/Destiny-One-TamperMonkey-Scripts
-// @version      2.4
-// @description  Makes the Save button on various pages float at the bottom of the screen as you scroll for easier access.
+// @version      2.5
+// @description  Creates a floating Save button that is always visible at the bottom of the screen when the actual save button on the page is not visible.
 // @author       Ven Meyerzon
 // @match        https://ucdavistestsv.destinysolutions.com/srs/*
 // @grant        none
@@ -11,16 +11,16 @@
 (function() {
     'use strict';
 
-    let buttonStyle = "position: fixed; left: 37.5%;  bottom: 5px; font-size: 20px !important; width: 25%;";
+    let buttonStyle = "position: fixed; left: 0;  bottom: 0; font-size: 20px !important; width: 100%; border-radius: 0px !important;";
 
     // Helper function to determine if an element is in the viewport
     var isInViewport = function (elem) {
         var distance = elem.getBoundingClientRect();
         return (
-            distance.top >= 0 &&
-            distance.left >= 0 &&
-            distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+            distance.bottom > 0 &&
+            distance.right > 0 &&
+            distance.left < (window.innerWidth || document.documentElement.clientWidth) &&
+            distance.top < (window.innerHeight || document.documentElement.clientHeight)
         );
     };
 
