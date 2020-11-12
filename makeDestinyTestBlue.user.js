@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Make Destiny One Test Blue
 // @namespace    https://github.com/venmey/Destiny-One-TamperMonkey-Scripts
-// @version      2.7
+// @version      2.8
 // @description  Makes various elements in Destiny One TEST blue instead of red to distinguish it from PROD.
 // @author       Ven Meyerzon
 // @match        https://ucdavistestsv.destinysolutions.com/srs/*
@@ -13,12 +13,16 @@
 
     document.head.insertAdjacentHTML("beforeend",
  `<style>
- #navigation01, #footer01, 
- #navigation02 ul.navigationMenu > li:hover, 
- .dropDownThirdLevelMenu > li > div:hover, 
+ #navigation01, #footer01,
+ #navigation02 ul.navigationMenu > li:hover,
+ .dropDownThirdLevelMenu > li > div:hover,
  #main-menu ul li.hover li.hover,
  .dropDownFourthLevelMenu > li > div:hover {
      background-color: #4F7094 !important;
+ }
+
+ #main-menu ul li.selectedItem {
+     background: url("https://raw.githubusercontent.com/venmey/Destiny-One-TamperMonkey-Scripts/main/images/downArrow.png") no-repeat  235px 10px !important;
  }
 
  #main-menu ul li.selectedItem:hover {
@@ -33,7 +37,7 @@
     border: none !important;
  }
 
- #navigation02 ul.navigationMenu > li.selected > div > a, 
+ #navigation02 ul.navigationMenu > li.selected > div > a,
  .dropDownThirdLevelMenu li.selected > div a {
      color: #4F7094 !important;
  }
