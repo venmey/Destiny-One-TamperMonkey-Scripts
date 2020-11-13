@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Show CSN
-// @version      1.0
-// @description  Make the custom section number visible on the enrollments page.
+// @version      2.0
+// @description  Creates a checkbox to toggle visibility of the custom section number/course and section codes on the Enrolled and Historical pages in Enrollment Manager.
 // @author       Ven Meyerzon
 // @match        https://ucdavissv.destinysolutions.com/srs/enrolmgr/common/course/studentEnrolledCourses*
 // @match        https://ucdavissv.destinysolutions.com/srs/enrolmgr/common/course/academicHistory*
@@ -14,37 +14,55 @@
 // @grant        none
 // ==/UserScript==
 
-var courseSections = document.querySelectorAll("td.courseHistoryNameCol a");
-var csnButton = document.querySelector(".expandCollapseCol");
-var originalText = [];
-var newText = [];
 
-var showingCSN = false;
-
-function getOriginal() {
-	for (var i = 0; i < courseSections.length; i++) {
-		originalText[i] = courseSections[i].textContent;
-        newText[i] = courseSections[i].textContent.slice(-19, -10);
-	}
-}
-
+// Function to update what is displayed in the Course Section column
 function updateDisplay() {
-	for (var i = 0; i < courseSections.length; i++) {
-		if (showingCSN) {
-			courseSections[i].textContent = originalText[i];
+	 for (let i = 0; i < courseSections.length; i++) {
+		if (csnCheckbox.checked) {
+            courseSections[i].textContent = csnText[i];
+            csnColumn.querySelector("a").innerText = "CSN";
 		} else {
-			courseSections[i].textContent = newText[i];
+            courseSections[i].textContent = courseSectionText[i];
+            csnColumn.querySelector("a").innerText = "Course Section";
 		}
 	}
-	showingCSN = !showingCSN;
 }
 
+// Select course history table
+let courseHistoryTable = document.querySelector("#courseHistoryTable");
 
+// Create csn checkbox, set attributes and style
+let csnCheckbox = document.createElement("input");
+csnCheckbox.setAttribute("type", "checkbox");
+csnCheckbox.setAttribute("id", "csnCheckbox");
+csnCheckbox.setAttribute("name", "csnCheckbox");
+csnCheckbox.style.marginTop = "10px";
 
+// Default checkbox value is checked
+csnCheckbox.checked = true;
 
-// main script
-getOriginal();
-console.log("Original values stored");
-csnButton.innerHTML = "<span \" style=\"cursor:pointer;\" id=\"ShowCSN\">Show CSN</span>";
-var myButton = document.querySelector("#ShowCSN");
-myButton.addEventListener ("click", updateDisplay, false);
+// Create csn checkbox label
+let csnCheckboxLabel = document.createElement("label");
+csnCheckboxLabel.setAttribute("for", "csnCheckbox");
+csnCheckboxLabel.innerText = "Show Custom Section Number instead of Course and Section Codes";
+
+// Insert checkbox and label into DOM before the courseHistoryTable <table>
+courseHistoryTable.before(csnCheckbox);
+courseHistoryTable.before(csnCheckboxLabel);
+
+// Get course/section codes and csn values for each row and store them
+let csnColumn = document.querySelector(".courseHistoryNameCol");
+let courseSections = document.querySelectorAll("td.courseHistoryNameCol a");
+let courseSectionText = [];
+let csnText = [];
+
+for (let i = 0; i < courseSections.length; i++) {
+	courseSectionText[i] = courseSections[i].textContent;
+    csnText[i] = courseSections[i].textContent.slice(-19, -10);
+}
+
+// Update display based on checkbox initial value
+updateDisplay();
+
+// Add event listener to update display each time checkbox value changes
+csnCheckbox.addEventListener ("change", updateDisplay);
