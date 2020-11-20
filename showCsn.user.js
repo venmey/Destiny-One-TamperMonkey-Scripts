@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         Show CSN
-// @version      2.0
+// @name         Show CSN in Enrolled and Historical Courses
+// @version      2.1
 // @description  Creates a checkbox to toggle visibility of the custom section number/course and section codes on the Enrolled and Historical pages in Enrollment Manager.
 // @author       Ven Meyerzon
 // @match        https://ucdavissv.destinysolutions.com/srs/enrolmgr/common/course/studentEnrolledCourses*
@@ -20,13 +20,16 @@ function updateDisplay() {
 	 for (let i = 0; i < courseSections.length; i++) {
 		if (csnCheckbox.checked) {
             courseSections[i].textContent = csnText[i];
-            csnColumn.querySelector("a").innerText = "CSN";
+            csnColumn.querySelector("a").innerText = "Custom Section Number";
 		} else {
             courseSections[i].textContent = courseSectionText[i];
             csnColumn.querySelector("a").innerText = "Course Section";
 		}
 	}
-}
+
+    // Update localStorage checkbox value
+    localStorage.setItem("csnCheckboxState", csnCheckbox.checked);
+} // end updateDisplay()
 
 // Select course history table
 let courseHistoryTable = document.querySelector("#courseHistoryTable");
@@ -38,8 +41,8 @@ csnCheckbox.setAttribute("id", "csnCheckbox");
 csnCheckbox.setAttribute("name", "csnCheckbox");
 csnCheckbox.style.marginTop = "10px";
 
-// Default checkbox value is checked
-csnCheckbox.checked = true;
+// Set checkbox value on pageload to value in localStorage or to false if no localStorage found
+csnCheckbox.checked = JSON.parse(localStorage.getItem('csnCheckboxState')) || false;
 
 // Create csn checkbox label
 let csnCheckboxLabel = document.createElement("label");
