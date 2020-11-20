@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Floating Buttons
+// @name         Floating Save Button
 // @namespace    https://github.com/venmey/Destiny-One-TamperMonkey-Scripts
 // @version      2.6
 // @description  Creates a floating Save button that is always visible at the bottom of the screen when the actual save button on the page is not visible.
