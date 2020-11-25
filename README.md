@@ -6,3 +6,5 @@ A series of TamperMonkey scripts written to modify the Destiny One user interfac
 2. makeDestinyTestBlue - Changes the color scheme of the Destiny One TEST environment to blue to help distinguish it from PROD.
 
 3. showCsn - Adds a checkbox on the Enrollment Manager > Courses > Historical and Enrollment Manager > Courses > Enrolled pages when a student is in context that allows you to toggle between displaying the Course and Section Code (default Destiny One behavior) and the Custom Section Number.
+
+4. favIcons - Adds a favicon (little icon in the top left-corner of the tab) when you visit either the Destiny One TEST or PROD staff view.
