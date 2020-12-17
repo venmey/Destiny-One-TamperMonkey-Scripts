@@ -1,7 +1,7 @@
 # Destiny One TamperMonkey Scripts
 This GitHub repository contains a series of TamperMonkey scripts written to modify the Destiny One user interface. Before you can use the scripts, visit the [TamperMonkey homepage](https://www.tampermonkey.net/) and install the extension for your favorite browser. You can then use the links below to add a specific script to your browser. Full instructions are available in the [Destiny One TamperMonkey Userscripts guide](https://ucdavis.app.box.com/file/745737709189)
 
-* [downloadButtonForApplicationAttachments] (https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/downloadButtonForApplicationAttachments.user.js) - Adds a download button next to each attached file in a student's application for faster saving of application attachments.
+* [downloadButtonForApplicationAttachments](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/downloadButtonForApplicationAttachments.user.js) - Adds a download button next to each attached file in a student's application for faster saving of application attachments.
 
 * [favIcons](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/favIcons.user.js) - Adds a favicon (little icon in the top left-corner of the tab) when you visit either the Destiny One TEST or PROD staff view.
 
