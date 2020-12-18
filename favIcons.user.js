@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         [D1] Set favicons
+// @name         [D1] Set Favicons
 // @namespace    https://github.com/venmey/Destiny-One-TamperMonkey-Scripts
-// @version      1.0
+// @version      1.1
 // @description  Sets a favicon for PROD and TEST
 // @author       Ven Meyerzon
 // @match        https://ucdavistestsv.destinysolutions.com/srs/*
