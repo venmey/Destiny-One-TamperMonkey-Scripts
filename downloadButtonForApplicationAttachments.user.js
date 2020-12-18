@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [D1] Download Button for Application Attachments
 // @namespace    https://github.com/venmey/Destiny-One-TamperMonkey-Scripts
-// @version      2.0
+// @version      2.1
 // @description  Adds a download button next to each attached file in a student's application for faster saving of application attachments.
 // @author       Ven Meyerzon
 // @match        https://ucdavistestsv.destinysolutions.com/srs/enrolmgr/student/applications/*
@@ -13,11 +13,11 @@
     'use strict';
 
     // function that will attempt to download all URLs in an array
-    function downloadAll(urls) {
-        for (url of urls) {
+    window.downloadAll = function(urls) {
+        for (let i = 0; i < urls.length; i++) {
             let a = document.createElement("a");
-            a.setAttribute("href", url[0]);
-            a.setAttribute("download", url[1]);
+            a.setAttribute("href", urls[i][0]);
+            a.setAttribute("download", urls[i][1]);
             a.setAttribute("target", "_blank");
             a.click();
         }
@@ -66,7 +66,7 @@
     downloadAllButton.setAttribute("value", "Download All");
     downloadAllButton.setAttribute("title", "Download All Attachments");
     downloadAllButton.innerText = "Download All";
-    downloadAllButton.onclick = function() { downloadAll(urlArray); };
+    downloadAllButton.addEventListener("click", function() { downloadAll(urlArray); });
 
     // Place downloadAll button below the "Attached Files" text
     document.querySelector("#uploadFile").parentElement.previousElementSibling.appendChild(downloadAllButton);
