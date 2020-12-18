@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         [D1] Download Button for Application Attachments
 // @namespace    https://github.com/venmey/Destiny-One-TamperMonkey-Scripts
-// @version      2.2
-// @description  Adds a download button next to each attached file in a student's application for faster saving of application attachments.
+// @version      2.3
+// @description  Adds a Download All button to download all attachments and a download button next to each attached file in a student's application for faster saving of application attachments.
 // @author       Ven Meyerzon
 // @match        https://ucdavistestsv.destinysolutions.com/srs/enrolmgr/student/applications/*
 // @match        https://ucdavissv.destinysolutions.com/srs/enrolmgr/student/applications/*
