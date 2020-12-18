@@ -15,14 +15,14 @@ Adds a Download All button to download all attachments and a download button nex
   * Specify a location to *Save files to* instead of using the *Always ask you where to save files* setting in **Options > General > Files and Applications > Downloads**.
 * Other browsers have not been tested.
 
-## [Set Favicons](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/favIcons.user.js)
-Adds a favicon (little icon in the top left-corner of the tab) when you visit either the Destiny One TEST or PROD staff view.
-
 ## [Floating Save Button](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/floatingButtons.user.js)
-Creates a floating save button at the bottom of the screen whenever the actual save button is not visible. Makes it easier to save your changes at any time without needing to scroll to the real save button or remember the correct keyboard shortcut.
+Creates a floating save button at the bottom of the screen whenever the actual save button on a particular page is not visible. This makes it easier to save your changes at any time without needing to scroll to the bottom of a page or remember the correct keyboard shortcut.
 
 ## [Make Destiny One Test Blue](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/makeDestinyTestBlue.user.js)
-Changes the color scheme of the Destiny One TEST environment to blue to help distinguish it from PROD.
+Changes the style of various elements of the Destiny One TEST environment help distinguish it from PROD. The main change is a shift to a blue color scheme.
+
+## [Set Favicons](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/favIcons.user.js)
+Adds a favicon (little icon in the top left-corner of the tab) when you visit either the Destiny One TEST or PROD staff view. This is useful for distiniguishing between PROD and TEST tabs of Destiny One.
 
 ## [Show CSN in Enrolled and Historical Courses](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/showCsn.user.js)
-Adds a checkbox on the Enrollment Manager > Courses > Historical and Enrollment Manager > Courses > Enrolled pages when a student is in context that allows you to toggle between displaying the Course and Section Code (default Destiny One behavior) and the Custom Section Number.
+Adds a checkbox on the **Enrollment Manager > Courses > Historical** and **Enrollment Manager > Courses > Enrolled** pages when a student is in context that allows you to toggle between displaying the Course and Section Code (default Destiny One behavior) or the Custom Section Number. Your checkbox selection will be maintained between both pages and between PROD and TEST.
