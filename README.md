@@ -21,6 +21,9 @@ Creates a floating save button at the bottom of the screen whenever the actual s
 ## [Make Destiny One Test Blue](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/makeDestinyTestBlue.user.js)
 Changes the style of various elements of the Destiny One TEST environment help distinguish it from PROD. The main change is a shift to a blue color scheme.
 
+## [More Obvious Inactive Items](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/moreObviousInactiveItems.user.js)
+Changes the styling of inactive items in dropdown and select lists to make them stand out more. Also displays an alert if any inactive items have been selected on a page.
+
 ## [Set Favicons](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/favIcons.user.js)
 Adds a favicon (little icon in the top left-corner of the tab) when you visit either the Destiny One TEST or PROD staff view. This is useful for distiniguishing between PROD and TEST tabs of Destiny One.
 
