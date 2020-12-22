@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         [D1] More Obvious Inactive Items
 // @namespace    https://github.com/venmey/Destiny-One-TamperMonkey-Scripts
-// @version      1.0
+// @version      1.1
 // @description  Makes inactive items in select lists more obvious by giving them a red background and displays an alert if an inactive item has been selected.
 // @author       Ven Meyerzon
 // @match        https://ucdavistestsv.destinysolutions.com/srs/*
