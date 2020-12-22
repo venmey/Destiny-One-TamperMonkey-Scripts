@@ -10,7 +10,7 @@
 // ==/UserScript==
 
 (function() {
-	let selectedInactives = "Warning! You have selected the following inactive items in a dropdown/select list:\n"; // will display warning message with all selected inactives
+	let selectedInactives = "Warning! The following inactive items are currently selected in a dropdown/select list:\n"; // will display warning message with all selected inactives
 	let selectedInactivesCount = 0; // counts selected inactives
 	// Get all select lists on the page
 	let selectLists = document.querySelectorAll("select");
