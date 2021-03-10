@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         [D1] Make Destiny One Test Blue
+// @name         [D1] Make Destiny One Test Purple
 // @namespace    https://github.com/venmey/Destiny-One-TamperMonkey-Scripts
-// @version      2.9
-// @description  Makes various elements in Destiny One TEST blue instead of red to distinguish it from PROD.
+// @version      3.0
+// @description  Makes various elements in Destiny One TEST purple instead of blue to distinguish it from PROD.
 // @author       Ven Meyerzon
 // @match        https://ucdavistestsv.destinysolutions.com/srs/*
 // @grant        none
@@ -11,6 +11,9 @@
 (function() {
     'use strict';
 
+    let mainColor = '#76236C';
+    let supportingColor = '#C6007E';
+
     document.head.insertAdjacentHTML("beforeend",
  `<style>
  #navigation01, #footer01,
@@ -18,19 +21,16 @@
  .dropDownThirdLevelMenu > li > div:hover,
  #main-menu ul li.hover li.hover,
  .dropDownFourthLevelMenu > li > div:hover {
-     background-color: #4F7094 !important;
+     background-color: ${mainColor} !important;
  }
 
- #main-menu ul li.selectedItem {
-     background: url("https://raw.githubusercontent.com/venmey/Destiny-One-TamperMonkey-Scripts/main/images/downArrow.png") no-repeat  235px 10px !important;
- }
 
  #main-menu ul li.selectedItem:hover {
-     background-color: #6884A3 !important;
+     background-color: ${supportingColor} !important;
  }
 
  .dropDownThirdLevelMenu li.selected > div a {
-     border-left: 5px solid #4F7094 !important;
+     border-left: 5px solid ${mainColor} !important;
  }
 
  .dropDownFourthLevelMenu li.selected > div > a {
@@ -39,7 +39,7 @@
 
  #navigation02 ul.navigationMenu > li.selected > div > a,
  .dropDownThirdLevelMenu li.selected > div a {
-     color: #4F7094 !important;
+     color: ${mainColor} !important;
  }
 
  .dropDownThirdLevelMenu li > div:hover > a, #navigation02 ul.navigationMenu > li:hover > div > a {
