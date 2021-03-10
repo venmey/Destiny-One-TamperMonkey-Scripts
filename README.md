@@ -18,8 +18,8 @@ Adds a Download All button to download all attachments and a download button nex
 ## [Floating Save Button](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/floatingButtons.user.js)
 Creates a floating save button at the bottom of the screen whenever the actual save button on a particular page is not visible. This makes it easier to save your changes at any time without needing to scroll to the bottom of a page or remember the correct keyboard shortcut.
 
-## [Make Destiny One Test Blue](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/makeDestinyTestBlue.user.js)
-Changes the style of various elements of the Destiny One TEST environment help distinguish it from PROD. The main change is a shift to a blue color scheme.
+## [Make Destiny One Test Purple](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/makeDestinyTestBlue.user.js)
+Changes the style of various elements of the Destiny One TEST environment to help distinguish it from PROD. The main change is a shift to a purple color scheme.
 
 ## [More Obvious Inactive Items](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/moreObviousInactiveItems.user.js)
 Changes the styling of inactive items in dropdown and select lists to make them stand out more. Also displays an alert if any inactive items have been selected on a page.
