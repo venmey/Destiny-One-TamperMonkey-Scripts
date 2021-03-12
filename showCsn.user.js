@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         [D1] Show CSN in Enrolled and Historical Courses
-// @version      2.2
+// @version      2.3
 // @description  Creates a checkbox to toggle visibility of the custom section number/course and section codes on the Enrolled and Historical pages in Enrollment Manager.
 // @author       Ven Meyerzon
 // @match        https://ucdavissv.destinysolutions.com/srs/enrolmgr/common/course/studentEnrolledCourses*
@@ -65,7 +65,7 @@ for (let i = 0; i < courseSections.length; i++) {
     let stringOffset = 16; // Length of the string 'Custom Section # ' that appears prior to the CSN that you need to offset the csnIndex by
     let csnIndex = courseSectionText[i].indexOf("Custom Section# ") + stringOffset; // Index of the start of the CSN
     let closeParanIndex = courseSections[i].textContent.indexOf(")"); // Index of the closing paran and therefore the end of the CSN
-    
+
     csnText[i] = courseSections[i].textContent.slice(csnIndex, closeParanIndex); // Grab the string from the start of the CSN to the end of the CSN
 }
 
