@@ -60,8 +60,13 @@ let courseSectionText = [];
 let csnText = [];
 
 for (let i = 0; i < courseSections.length; i++) {
-	courseSectionText[i] = courseSections[i].textContent;
-    csnText[i] = courseSections[i].textContent.slice(-19, -10);
+	courseSectionText[i] = courseSections[i].textContent; // Returns the course and section code and the CSN in parans
+
+    let stringOffset = 16; // Length of the string 'Custom Section # ' that appears prior to the CSN that you need to offset the csnIndex by
+    let csnIndex = courseSectionText[i].indexOf("Custom Section# ") + stringOffset; // Index of the start of the CSN
+    let closeParanIndex = courseSections[i].textContent.indexOf(")"); // Index of the closing paran and therefore the end of the CSN
+    
+    csnText[i] = courseSections[i].textContent.slice(csnIndex, closeParanIndex); // Grab the string from the start of the CSN to the end of the CSN
 }
 
 // Update display based on checkbox initial value
