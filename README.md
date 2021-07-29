@@ -27,7 +27,7 @@ Changes the styling of inactive items in dropdown and select lists to make them 
 ## [Set Favicons](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/favIcons.user.js)
 Adds a favicon (little icon in the top left-corner of the tab) when you visit either the Destiny One TEST or PROD staff view. This is useful for distiniguishing between PROD and TEST tabs of Destiny One.
 
-## [Show CSN in Enrolled and Historical Courses](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/showCsn.user.js)
+## [Show CSN in Enrolled and Historical Courses (Deprecated)](https://github.com/venmey/Destiny-One-TamperMonkey-Scripts/raw/main/showCsn.user.js)
 Adds a checkbox on the **Enrollment Manager > Courses > Historical** and **Enrollment Manager > Courses > Enrolled** pages when a student is in context that allows you to toggle between displaying the Course and Section Code (default Destiny One behavior) or the Custom Section Number. Your checkbox selection will be maintained between both pages and between PROD and TEST.
 
-*Note: This script is now deprecated, because Destiny One now provides a Custom Section No. column as a configurable option. Once this new column is enabled in PROD, this script will no longer do anything and can be disabled or deleted from your TamperMonkey dashboard.*
+*Note: This script is now deprecated, because Destiny One now provides a* **Custom Section No.** *column as a configurable option. Once this new column is enabled in PROD, this script will no longer do anything and can be disabled or deleted from your TamperMonkey dashboard.*
