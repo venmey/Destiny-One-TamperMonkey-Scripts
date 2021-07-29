@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         [D1] Show CSN in Enrolled and Historical Courses (Deprecated)
-// @version      3.1
+// @name         [D1] Show CSN in Enrolled and Historical Courses
+// @version      3.2
 // @description  Creates a checkbox to toggle visibility of the custom section number/course and section codes on the Enrolled and Historical pages in Enrollment Manager unless The 'Custom Section No.' config is enabled.
 // @author       Ven Meyerzon
 // @match        https://ucdavissv.destinysolutions.com/srs/enrolmgr/common/course/studentEnrolledCourses*
